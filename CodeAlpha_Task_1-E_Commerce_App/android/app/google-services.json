@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "37613061673",
+    "project_id": "shopitem-b2de4",
+    "storage_bucket": "shopitem-b2de4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37613061673:android:6eb876bd94db5bb0cbfe38",
+        "android_client_info": {
+          "package_name": "com.example.shopitem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfWQ7sRG6nHXtMikm-Ti965ESR2EeYZHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

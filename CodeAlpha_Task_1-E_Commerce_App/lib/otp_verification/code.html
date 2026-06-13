@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .otp-input:focus {
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e2e7ff",
+                        "surface-tint": "#0053db",
+                        "inverse-primary": "#b4c5ff",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "surface-bright": "#faf8ff",
+                        "on-background": "#131b2e",
+                        "surface": "#faf8ff",
+                        "secondary-container": "#8a4cfc",
+                        "inverse-surface": "#283044",
+                        "outline": "#737686",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "tertiary": "#006242",
+                        "primary": "#004ac6",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#dbe1ff",
+                        "on-secondary-fixed": "#25005a",
+                        "surface-dim": "#d2d9f4",
+                        "primary-container": "#2563eb",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-surface-variant": "#434655",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#007d55",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#eeefff",
+                        "outline-variant": "#c3c6d7",
+                        "surface-container-low": "#f2f3ff",
+                        "on-tertiary-container": "#bdffdb",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#dae2fd",
+                        "on-tertiary-fixed": "#002113",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "background": "#faf8ff",
+                        "on-surface": "#131b2e",
+                        "inverse-on-surface": "#eef0ff",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#fffbff",
+                        "tertiary-fixed": "#6ffbbe",
+                        "surface-variant": "#dae2fd",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#eaddff",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eaedff",
+                        "secondary": "#712ae2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "20px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "gutter": "16px",
+                        "section-gap": "48px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col items-center">
+<!-- Top AppBar - Following JSON structure -->
+<header class="bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-xl text-primary dark:text-inverse-primary font-headline-md text-headline-md docked full-width top-0 sticky shadow-sm shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex justify-between items-center px-container-margin h-16 w-full z-50">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined hover:opacity-80 transition-opacity active:scale-95 duration-200">arrow_back</button>
+<span class="font-display-lg text-display-lg bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">LuxMarket</span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined hover:opacity-80 transition-opacity active:scale-95 duration-200">help</span>
+</div>
+</header>
+<main class="flex-1 w-full max-w-md px-container-margin flex flex-col items-center justify-center py-section-gap">
+<!-- Hero Visual / Icon -->
+<div class="mb-stack-lg relative">
+<div class="w-24 h-24 rounded-full bg-surface-container-high flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-[48px] text-primary" data-icon="shield_lock" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<!-- Pulse effect for security vibe -->
+<div class="absolute inset-0 w-24 h-24 rounded-full bg-primary/10 animate-ping opacity-25"></div>
+</div>
+<!-- Verification Header -->
+<div class="text-center mb-stack-lg">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-stack-sm">Verify Your Identity</h1>
+<p class="font-body-md text-on-surface-variant max-w-[280px] mx-auto">
+                Enter the 6-digit code sent to your phone/email.
+            </p>
+</div>
+<!-- OTP Input Grid -->
+<div class="flex gap-stack-sm mb-stack-lg w-full justify-center">
+<input autofocus="" class="w-12 h-14 text-center text-headline-md font-headline-md bg-surface-container-low border border-outline-variant rounded-xl focus:border-primary focus:outline-none transition-all otp-input" maxlength="1" placeholder="•" type="text" value=""/>
+<input class="w-12 h-14 text-center text-headline-md font-headline-md bg-surface-container-low border border-outline-variant rounded-xl focus:border-primary focus:outline-none transition-all otp-input" maxlength="1" placeholder="•" type="text" value=""/>
+<input class="w-12 h-14 text-center text-headline-md font-headline-md bg-surface-container-low border border-outline-variant rounded-xl focus:border-primary focus:outline-none transition-all otp-input" maxlength="1" placeholder="•" type="text" value=""/>
+<input class="w-12 h-14 text-center text-headline-md font-headline-md bg-surface-container-low border border-outline-variant rounded-xl focus:border-primary focus:outline-none transition-all otp-input" maxlength="1" placeholder="•" type="text" value=""/>
+<input class="w-12 h-14 text-center text-headline-md font-headline-md bg-surface-container-low border border-outline-variant rounded-xl focus:border-primary focus:outline-none transition-all otp-input" maxlength="1" placeholder="•" type="text" value=""/>
+<input class="w-12 h-14 text-center text-headline-md font-headline-md bg-surface-container-low border border-outline-variant rounded-xl focus:border-primary focus:outline-none transition-all otp-input" maxlength="1" placeholder="•" type="text" value=""/>
+</div>
+<!-- Primary Action -->
+<div class="w-full mb-stack-md">
+<button class="w-full h-[56px] rounded-xl bg-gradient-to-r from-primary to-secondary text-on-primary font-title-sm shadow-[0_10px_30px_rgba(37,99,235,0.2)] active:scale-95 transition-all duration-200">
+                Verify
+            </button>
+</div>
+<!-- Secondary Action / Timer -->
+<div class="text-center">
+<p class="font-body-sm text-on-surface-variant mb-stack-sm">Didn't receive the code?</p>
+<button class="flex items-center justify-center gap-base font-label-caps text-primary hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">history</span>
+                Resend Code (0:59)
+            </button>
+</div>
+<!-- Trust Badges Section -->
+<div class="mt-section-gap w-full">
+<div class="flex flex-col gap-stack-md p-stack-md bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/10">
+<div class="flex items-center gap-stack-sm">
+<div class="h-6 flex items-center gap-1 px-2 rounded-full bg-tertiary-container/10 text-tertiary text-[10px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                        Secure Encryption
+                    </div>
+</div>
+<p class="font-body-sm text-on-surface-variant">
+                    Your account security is our priority. We use industry-standard 256-bit encryption to protect your sensitive data during verification.
+                </p>
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-stack-sm">
+<img alt="PCI DSS Compliant" class="h-4 opacity-40 grayscale" data-alt="A clean, minimalist monochrome logo for PCI-DSS security standards compliance. The design is sleek and corporate, fitting a high-end luxury e-commerce application. The aesthetic is professional, centered on trust and financial security. It sits subtly on a white background with a light grey finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMbqwhS2K3qViCaMIJcaIU3xeWTMqlf0LkWDemgn3h6qYsw377PzXRUCxaViYQYDCd_Oc7FTErshdB1oFitSjtbxTmIqB_Wc-BxfY0dEjm0Ep1RqIhM-brE6mB5asUo1dDsFqcJ-qnx23QM48Nth-Nz283hnBbDEeCT-mnV6P_8jRAFBEaNdL88Ch1wZrckIhFVU_QAJ4JyjBb2ZHVso5SrPgvFYuyeV3my9A5y_cSlCOzH5OowGst3m4eNgKsDFniE0VDfnbJ"/>
+<img alt="SSL Secure" class="h-4 opacity-40 grayscale" data-alt="A sleek, minimalist digital security seal representing TLS and SSL encryption standards. The design uses modern typography and a subtle shield icon. The color palette is composed of soft greys and whites, emphasizing technical reliability and a frictionless user experience in a corporate setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxSNeH1NpVrtN8H17aiJ1NYiEAVsIwqwtji3Oh73yvWcpF-QX7Nf--bXUjOHRvCcERBlRE54r7P9_TZn_MuJdz_TEPqdKqV3l7OeZmEurrOOdFjgbTIdW5XnePeXw1SipctPPTXdNVC_3hHzGFzjuobsIxcNNtrdW7YtOfApHUNLFsWLIwffZByExQEw0U3-l6C-qAxgw7Trdg9FGMJwTSD9oID9_LqBtSDg8Mr1E3KmvaqOUYr3j7oCz8QThwSuFupr5DtIIJ"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Spacer (for layout consistency) -->
+<div class="h-20 md:hidden"></div>
+<!-- Background Decorative Elements -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
+<div class="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] bg-secondary/5 rounded-full blur-[80px]"></div>
+</div>
+</body></html>
